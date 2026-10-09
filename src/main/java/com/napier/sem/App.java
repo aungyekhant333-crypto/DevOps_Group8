@@ -6,23 +6,18 @@ public class App {
 
     public static void main(String[] args) {
 
-        PopulationReport populationReport = new PopulationReport();
+        CountryReports countryReports = new CountryReports();
 
-        List<RegionPopulation> reports =
-                populationReport.getPopulationByRegion();
+        List<Country> countries =
+                countryReports.getCountriesByPopulation();
 
-        System.out.println("Population by Region");
-        System.out.println("====================");
+        System.out.println("All Countries by Population");
+        System.out.println("============================");
 
-        for (RegionPopulation report : reports) {
-
+        for (Country country : countries) {
             System.out.println(
-                    report.getRegion() + " | " +
-                            "Total: " + report.getTotalPopulation() + " | " +
-                            "Urban: " + report.getUrbanPopulation() + " (" +
-                            String.format("%.2f", report.getUrbanPercentage()) + "%) | " +
-                            "Non-Urban: " + report.getNonUrbanPopulation() + " (" +
-                            String.format("%.2f", report.getNonUrbanPercentage()) + "%)"
+                    country.getName() + " | " +
+                            country.getPopulation()
             );
         }
     }
