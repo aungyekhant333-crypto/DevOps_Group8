@@ -11,7 +11,7 @@ public class App {
             while (running) {
                 System.out.println("\n=================================");
                 System.out.println("       DevOps Group 8");
-                System.out.println("    Population Reports");
+                System.out.println("       Population Reports");
                 System.out.println("=================================");
                 System.out.println("1. World population");
                 System.out.println("2. Country population");
@@ -19,6 +19,8 @@ public class App {
                 System.out.println("4. Region population");
                 System.out.println("5. District population");
                 System.out.println("6. City population");
+                System.out.println("---------------------------------");
+                System.out.println("7. Country and Language Reports");
                 System.out.println("0. Exit");
                 System.out.print("Choose a report: ");
 
@@ -62,18 +64,22 @@ public class App {
                         );
                     }
 
+                    case "7" -> CountryLanguageReportsMenu.show(scanner);
+
                     case "0" -> {
                         System.out.println("Goodbye!");
                         running = false;
                     }
 
                     default -> System.out.println(
-                            "Invalid choice. Please enter a number from 0 to 6."
+                            "Invalid choice. Please enter a number from 0 to 7."
                     );
                 }
 
                 if (running) {
-                    System.out.println("\nPress Enter to return to the menu...");
+                    System.out.println(
+                            "\nPress Enter to return to the menu..."
+                    );
                     scanner.nextLine();
                 }
             }
