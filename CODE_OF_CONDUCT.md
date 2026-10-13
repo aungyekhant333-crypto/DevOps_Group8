@@ -41,3 +41,5 @@ This Code of Conduct establishes the expectations for communication, participati
 * Team members should communicate openly about difficulties, delays, or problems affecting their assigned work.
 
 Any other notable offences that required addressing will be updated to this code of conduct as necessary, I will notify the members when any revisions happened.
+
+This is DevOps Assesement

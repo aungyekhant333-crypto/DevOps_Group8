@@ -4,38 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8b01d9f-31f4-42fb-916d-9d290cd52b9d" name="Changes" comment="First Commit" />
+    <list default="true" id="449e2a56-a8e4-4403-aedc-d2a9c71b2d3e" name="Changes" comment="First Attempt" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/aung-reports" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;aungyekhant333-crypto&quot;
+    &quot;assignee&quot;: &quot;YoonPPAung&quot;
   }
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/aungyekhant333-crypto/DevOps_Group8.git&quot;,
-    &quot;accountId&quot;: &quot;f122ceaf-e5f5-43c8-8561-ee85f3ee25fc&quot;
+    &quot;accountId&quot;: &quot;6fa25ddd-ad90-4293-9668-04fa179bc000&quot;
   }
 }</component>
   <component name="KubernetesApiPersistence">{}</component>
@@ -43,105 +35,98 @@
   &quot;isMigrated&quot;: true
 }</component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0,
-  &quot;fromUser&quot;: false
+  &quot;associatedIndex&quot;: 1
 }</component>
-  <component name="ProjectId" id="3KLoMF8hpRdXdISUCC67bbiB24m" />
+  <component name="ProjectId" id="3KPBwYayBQOY3NvBvsXwoCGgTit" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.App.executor": "Run",
-    "Maven.DevOps_Group8 [clean].executor": "Run",
-    "Maven.DevOps_Group8 [compile].executor": "Run",
-    "Maven.DevOps_Group8 [package].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "release",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Info bsc/Devops/DevOps_Group8",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Info bsc/Devops/DevOps_Group8/src/main/java/com/napier/sem/Main.java",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.DevOps_Group8 [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.DevOps_Group8 [package].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;release&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/Uni extra work/DevOps/GroupProject/Group/DevOps_Group8/src/main/java/com/napier/sem/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <envs>
-        <env name="DB_URL" value="jdbc:mariadb://localhost:3307/world" />
-        <env name="DB_USER" value="root" />
-        <env name="DB_PASSWORD" value="aung123" />
-      </envs>
-      <option name="MAIN_CLASS_NAME" value="com.napier.sem.App" />
-      <module name="DevOps_Group8" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.napier.sem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.App" />
-        <item itemvalue="Application.App" />
-      </list>
-    </recent_temporary>
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.24374.151" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.24374.151" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e8b01d9f-31f4-42fb-916d-9d290cd52b9d" name="Changes" comment="" />
-      <created>1791346167659</created>
+      <changelist id="449e2a56-a8e4-4403-aedc-d2a9c71b2d3e" name="Changes" comment="" />
+      <created>1791449564040</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1791346167659</updated>
-      <workItem from="1791346169723" duration="2087000" />
-      <workItem from="1791436685773" duration="91000" />
-      <workItem from="1791784691382" duration="5328000" />
-      <workItem from="1791793198548" duration="1134000" />
-      <workItem from="1791797361687" duration="657000" />
-      <workItem from="1791811500283" duration="1946000" />
-      <workItem from="1791871005590" duration="768000" />
+      <updated>1791449564040</updated>
+      <workItem from="1791449565316" duration="3064000" />
+      <workItem from="1791460493010" duration="547000" />
+      <workItem from="1791529356042" duration="13000" />
+      <workItem from="1791614152566" duration="4168000" />
+      <workItem from="1791815746927" duration="687000" />
+      <workItem from="1791817800056" duration="964000" />
+      <workItem from="1791818778248" duration="329000" />
     </task>
-    <task id="LOCAL-00001" summary="First Commit">
+    <task id="LOCAL-00001" summary="First Attempt">
       <option name="closed" value="true" />
-      <created>1791347841858</created>
+      <created>1791450193423</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1791347841858</updated>
+      <updated>1791450193423</updated>
     </task>
-    <task id="LOCAL-00002" summary="First Commit">
+    <task id="LOCAL-00002" summary="First Attempt">
       <option name="closed" value="true" />
-      <created>1791871546303</created>
+      <created>1791450430849</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1791871546303</updated>
+      <updated>1791450430849</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="First Attempt">
+      <option name="closed" value="true" />
+      <created>1791450923840</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1791450923840</updated>
+    </task>
+    <task id="LOCAL-00004" summary="First Attempt">
+      <option name="closed" value="true" />
+      <created>1791450937563</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1791450937563</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="First Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
+    <MESSAGE value="First Attempt" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Attempt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
