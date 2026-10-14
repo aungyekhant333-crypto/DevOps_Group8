@@ -257,40 +257,40 @@ The workflow is expected at `.github/workflows/main.yml`. Check the actual file 
 
 The following checklist follows the requirement numbering in ascending order. Tick a requirement only after the relevant feature has been implemented and checked. Add a screenshot or other suitable evidence where required by the assessment.
 
-| ID | Requirement                                                                                                                               | Verified | Evidence                  |
-|---:|-------------------------------------------------------------------------------------------------------------------------------------------|:--------:|---------------------------|
-|  1 | List all countries in the world, ordered from largest population to smallest.                                                             |   [ ]    | To add                    |
-|  2 | List all countries in a selected continent, ordered from largest population to smallest.                                                  |   [ ]    | To add                    |
-|  3 | List all countries in a selected region, ordered from largest population to smallest.                                                     |   [ ]    | To add                    |
-|  4 | Show the top N most populated countries in the world, where N is provided by the user.                                                    |   [ ]    | To add                    |
-|  5 | Show the top N most populated countries in a selected continent.                                                                          |   [ ]    | To add                    |
-|  6 | Show the top N most populated countries in a selected region.                                                                             |   [ ]    | To add                    |
-|  7 | List all cities in the world, ordered from largest population to smallest.                                                                |   [ ]    | To add                    |
-|  8 | List all cities in a selected continent, ordered from largest population to smallest.                                                     |   [ ]    | To add                    |
-|  9 | List all cities in a selected region, ordered from largest population to smallest.                                                        |   [ ]    | To add                    |
-| 10 | List all cities in a selected country, ordered from largest population to smallest.                                                       |   [ ]    | To add                    |
-| 11 | List all cities in a selected district, ordered from largest population to smallest.                                                      |   [ ]    | To add                    |
-| 12 | Show the top N most populated cities in the world.                                                                                        |   [ ]    | To add                    |
-| 13 | Show the top N most populated cities in a selected continent.                                                                             |   [ ]    | To add                    |
-| 14 | Show the top N most populated cities in a selected region.                                                                                |   [ ]    | To add                    |
-| 15 | Show the top N most populated cities in a selected country.                                                                               |   [ ]    | To add                    |
-| 16 | Show the top N most populated cities in a selected district.                                                                              |   [ ]    | To add                    |
-| 17 | List all capital cities in the world, ordered from largest population to smallest.                                                        |   [ ]    | To add                    |
-| 18 | List all capital cities in a selected continent, ordered from largest population to smallest.                                             |   [ ]    | To add                    |
-| 19 | List all capital cities in a selected region, ordered from largest population to smallest.                                                |   [ ]    | To add                    |
-| 20 | Show the top N most populated capital cities in the world.                                                                                |   [ ]    | To add                    |
-| 21 | Show the top N most populated capital cities in a selected continent.                                                                     |   [ ]    | To add                    |
-| 22 | Show the top N most populated capital cities in a selected region.                                                                        |   [ ]    | To add                    |
-| 23 | Report total, urban and non-urban population figures and percentages for each continent.                                                  |   [ ]    | To add                    |
-| 24 | Report total, urban and non-urban population figures and percentages for each region.                                                     |   [ ]    | To add                    |
-| 25 | Report total, urban and non-urban population figures and percentages for each country.                                                    |   [ ]    | To add                    |
-| 26 | Report the total population of the world.                                                                                                 | [ Yes ]  | ![img_11.png](img_11.png) |
-| 27 | Report the total population of a selected continent.                                                                                      | [ Yes ]  | ![img_12.png](img_12.png) |
-| 28 | Report the total population of a selected region.                                                                                         | [ Yes ]  | ![img_7.png](img_7.png)   |
-| 29 | Report the total population of a selected country.                                                                                        | [ Yes ]  | ![img_10.png](img_10.png) |
-| 30 | Report the total population of a selected district.                                                                                       | [ Yes ]  | ![img_9.png](img_9.png)   |
-| 31 | Report the total population of a selected city.                                                                                           | [ Yes ]  | ![img_8.png](img_8.png)   |
-| 32 | Report the number of speakers of Chinese, English, Hindi, Spanish and Arabic, with the required ranking and world-population percentages. |   [ ]    | To add                    |
+| ID | Requirement                                                                                                                               | Verified | Evidence                                         |
+|---:|-------------------------------------------------------------------------------------------------------------------------------------------|:--------:|--------------------------------------------------|
+|  1 | List all countries in the world, ordered from largest population to smallest.                                                             |   [ ]    | To add                                           |
+|  2 | List all countries in a selected continent, ordered from largest population to smallest.                                                  |   [ ]    | To add                                           |
+|  3 | List all countries in a selected region, ordered from largest population to smallest.                                                     |   [ ]    | To add                                           |
+|  4 | Show the top N most populated countries in the world, where N is provided by the user.                                                    |   [ ]    | To add                                           |
+|  5 | Show the top N most populated countries in a selected continent.                                                                          |   [ ]    | To add                                           |
+|  6 | Show the top N most populated countries in a selected region.                                                                             |   [ ]    | To add                                           |
+|  7 | List all cities in the world, ordered from largest population to smallest.                                                                |   [ ]    | To add                                           |
+|  8 | List all cities in a selected continent, ordered from largest population to smallest.                                                     |   [ ]    | To add                                           |
+|  9 | List all cities in a selected region, ordered from largest population to smallest.                                                        |   [ ]    | To add                                           |
+| 10 | List all cities in a selected country, ordered from largest population to smallest.                                                       |   [ ]    | To add                                           |
+| 11 | List all cities in a selected district, ordered from largest population to smallest.                                                      |   [ ]    | To add                                           |
+| 12 | Show the top N most populated cities in the world.                                                                                        |   [ ]    | To add                                           |
+| 13 | Show the top N most populated cities in a selected continent.                                                                             |   [ ]    | To add                                           |
+| 14 | Show the top N most populated cities in a selected region.                                                                                |   [ ]    | To add                                           |
+| 15 | Show the top N most populated cities in a selected country.                                                                               |   [ ]    | To add                                           |
+| 16 | Show the top N most populated cities in a selected district.                                                                              |   [ ]    | To add                                           |
+| 17 | List all capital cities in the world, ordered from largest population to smallest.                                                        |   [ ]    | To add                                           |
+| 18 | List all capital cities in a selected continent, ordered from largest population to smallest.                                             |   [ ]    | To add                                           |
+| 19 | List all capital cities in a selected region, ordered from largest population to smallest.                                                |   [ ]    | To add                                           |
+| 20 | Show the top N most populated capital cities in the world.                                                                                |   [ ]    | To add                                           |
+| 21 | Show the top N most populated capital cities in a selected continent.                                                                     |   [ ]    | To add                                           |
+| 22 | Show the top N most populated capital cities in a selected region.                                                                        |   [ ]    | To add                                           |
+| 23 | Report total, urban and non-urban population figures and percentages for each continent.                                                  |   [ ]    | To add                                           |
+| 24 | Report total, urban and non-urban population figures and percentages for each region.                                                     |   [ ]    | To add                                           |
+| 25 | Report total, urban and non-urban population figures and percentages for each country.                                                    |   [ ]    | To add                                           |
+| 26 | Report the total population of the world.                                                                                                 | [ Yes ]  | ![world_population_report.jpg](images/world_population_report.jpg) |
+| 27 | Report the total population of a selected continent.                                                                                      | [ Yes ]  | ![continent_report.jpg](images/continent_report.jpg)   |
+| 28 | Report the total population of a selected region.                                                                                         | [ Yes ]  |  ![region_report.jpg](images/region_report.jpg)|
+| 29 | Report the total population of a selected country.                                                                                        | [ Yes ]  |   ![country_report.jpg](images/country_report.jpg)                                              |
+| 30 | Report the total population of a selected district.                                                                                       | [ Yes ]  | ![district_report.jpg](images/district_report.jpg)                        |
+| 31 | Report the total population of a selected city.                                                                                           | [ Yes ]  | ![city_report.jpg](images/city_report.jpg)       |
+| 32 | Report the number of speakers of Chinese, English, Hindi, Spanish and Arabic, with the required ranking and world-population percentages. |   [ ]    | To add                                           |
 
 **Completion percentage:**
 
