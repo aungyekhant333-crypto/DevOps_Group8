@@ -7,6 +7,7 @@
 **Master Branch**
 
 [![Master build](https://img.shields.io/github/actions/workflow/status/aungyekhant333-crypto/DevOps_Group8/main.yml?branch=master&label=master%20build&logo=github&style=flat-square&cacheSeconds=60)](https://github.com/aungyekhant333-crypto/DevOps_Group8/actions/workflows/main.yml?query=branch%3Amaster)
+[![Releases](https://img.shields.io/github/release/aungyekhant333-crypto/DevOps_Group8/all.svg?style=flat-square)](https://github.com/aungyekhant333-crypto/DevOps_Group8/releases)
 
 **Develop branch:**
 
