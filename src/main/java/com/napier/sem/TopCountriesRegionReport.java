@@ -5,6 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Retrieves the top-ranked countries by population within a specified region.
+ */
 public class TopCountriesRegionReport {
 
     public static void showReport(String region, int limit) {

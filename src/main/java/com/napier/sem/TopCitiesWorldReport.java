@@ -5,6 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Retrieves the top-ranked cities by population worldwide.
+ */
 public class TopCitiesWorldReport {
 
     public static void showReport(int limit) {

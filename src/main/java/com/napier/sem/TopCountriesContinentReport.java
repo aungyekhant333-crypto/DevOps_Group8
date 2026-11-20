@@ -5,6 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Retrieves the top-ranked countries by population within a specified continent.
+ */
 public class TopCountriesContinentReport {
 
     public static void showReport(String continent, int limit) {
