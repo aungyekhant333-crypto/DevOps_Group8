@@ -1,5 +1,8 @@
 package com.napier.sem;
 
+/**
+ * Stores regional population totals and the urban and non-urban population breakdown.
+ */
 public class RegionPopulation {
 
     private String region;

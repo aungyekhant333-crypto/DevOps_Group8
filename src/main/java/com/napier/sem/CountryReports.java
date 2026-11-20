@@ -6,6 +6,9 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Retrieves country reports for the world, individual continents, and geographical regions.
+ */
 public class CountryReports {
 
     /**

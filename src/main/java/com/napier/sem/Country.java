@@ -1,5 +1,8 @@
 package com.napier.sem;
 
+/**
+ * Represents a country and stores its identifying details and population information.
+ */
 public class Country {
 
     private String code;
