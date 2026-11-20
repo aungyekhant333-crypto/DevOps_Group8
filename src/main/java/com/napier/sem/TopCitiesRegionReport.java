@@ -75,6 +75,7 @@ public class TopCitiesRegionReport {
                     "Could not retrieve the top cities in " + region + "."
             );
             System.err.println("Database error: " + e.getMessage());
+            throw new RuntimeException("Report execution failed.", e);
         }
     }
 }

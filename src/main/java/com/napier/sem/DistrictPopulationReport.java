@@ -42,6 +42,7 @@ public class DistrictPopulationReport {
         } catch (SQLException e) {
             System.err.println("Could not retrieve the district population.");
             System.err.println("Database error: " + e.getMessage());
+            throw new RuntimeException("Report execution failed.", e);
         }
     }
 }

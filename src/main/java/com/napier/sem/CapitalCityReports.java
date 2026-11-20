@@ -118,6 +118,7 @@ public class CapitalCityReports {
         } catch (SQLException e) {
             System.err.println("Could not retrieve the capital city report.");
             System.err.println("Database error: " + e.getMessage());
+            throw new RuntimeException("Report execution failed.", e);
         }
     }
 }

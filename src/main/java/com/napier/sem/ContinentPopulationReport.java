@@ -42,6 +42,7 @@ public class ContinentPopulationReport {
         } catch (SQLException e) {
             System.err.println("Could not retrieve the continent population.");
             System.err.println("Database error: " + e.getMessage());
+            throw new RuntimeException("Report execution failed.", e);
         }
     }
 
@@ -108,6 +109,7 @@ public class ContinentPopulationReport {
                     "Could not retrieve the population breakdown by continent."
             );
             System.err.println("Database error: " + e.getMessage());
+            throw new RuntimeException("Report execution failed.", e);
         }
     }
 }

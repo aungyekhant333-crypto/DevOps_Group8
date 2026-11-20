@@ -48,6 +48,7 @@ public class CountryReports {
 
         } catch (Exception e) {
             e.printStackTrace();
+            throw new RuntimeException("Report database retrieval failed.", e);
         }
 
         return countries;
@@ -96,6 +97,7 @@ public class CountryReports {
 
         } catch (Exception e) {
             e.printStackTrace();
+            throw new RuntimeException("Report database retrieval failed.", e);
         }
 
         return countries;
@@ -144,6 +146,7 @@ public class CountryReports {
 
         } catch (Exception e) {
             e.printStackTrace();
+            throw new RuntimeException("Report database retrieval failed.", e);
         }
 
         return countries;

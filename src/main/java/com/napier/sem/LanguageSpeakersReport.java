@@ -76,6 +76,7 @@ public class LanguageSpeakersReport {
                     "Could not retrieve the language speakers report."
             );
             System.err.println("Database error: " + e.getMessage());
+            throw new RuntimeException("Report execution failed.", e);
         }
     }
 }

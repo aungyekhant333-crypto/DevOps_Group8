@@ -42,6 +42,7 @@ public class RegionPopulationReport {
         } catch (SQLException e) {
             System.err.println("Could not retrieve the region population.");
             System.err.println("Database error: " + e.getMessage());
+            throw new RuntimeException("Report execution failed.", e);
         }
     }
 }

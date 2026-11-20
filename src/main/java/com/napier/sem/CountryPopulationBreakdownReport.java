@@ -84,6 +84,7 @@ public class CountryPopulationBreakdownReport {
                     "Could not retrieve the country population breakdown."
             );
             System.err.println("Database error: " + e.getMessage());
+            throw new RuntimeException("Report execution failed.", e);
         }
     }
 }

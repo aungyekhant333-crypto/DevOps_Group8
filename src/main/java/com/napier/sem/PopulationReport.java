@@ -85,6 +85,7 @@ public class PopulationReport {
 
         } catch (Exception e) {
             e.printStackTrace();
+            throw new RuntimeException("Report database retrieval failed.", e);
         }
 
         return reports;

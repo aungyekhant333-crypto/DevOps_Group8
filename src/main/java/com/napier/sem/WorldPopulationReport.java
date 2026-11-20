@@ -27,6 +27,7 @@ public class WorldPopulationReport {
         } catch (SQLException e) {
             System.err.println("Could not retrieve the world population.");
             System.err.println("Database error: " + e.getMessage());
+            throw new RuntimeException("Report execution failed.", e);
         }
     }
 }

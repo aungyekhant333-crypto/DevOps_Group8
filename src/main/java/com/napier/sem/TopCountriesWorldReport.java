@@ -53,6 +53,7 @@ public class TopCountriesWorldReport {
                     "Could not retrieve the top countries worldwide."
             );
             System.err.println("Database error: " + e.getMessage());
+            throw new RuntimeException("Report execution failed.", e);
         }
     }
 }

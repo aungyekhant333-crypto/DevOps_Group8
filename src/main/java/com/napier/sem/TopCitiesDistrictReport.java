@@ -75,6 +75,7 @@ public class TopCitiesDistrictReport {
                     "Could not retrieve the top cities in " + district + "."
             );
             System.err.println("Database error: " + e.getMessage());
+            throw new RuntimeException("Report execution failed.", e);
         }
     }
 }

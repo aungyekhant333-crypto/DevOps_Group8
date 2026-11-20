@@ -22,6 +22,10 @@ public class App {
                 System.err.println("Batch report execution failed.");
                 System.err.println("Database error: " + e.getMessage());
                 System.exit(1);
+            } catch (RuntimeException e) {
+                System.err.println("Batch report execution failed.");
+                System.err.println("Report error: " + e.getMessage());
+                System.exit(1);
             }
             return;
         }
@@ -53,6 +57,9 @@ public class App {
                 } catch (SQLException e) {
                     System.err.println("The report could not be completed.");
                     System.err.println("Database error: " + e.getMessage());
+                } catch (RuntimeException e) {
+                    System.err.println("The report could not be completed.");
+                    System.err.println("Report error: " + e.getMessage());
                 }
 
                 if (running) {

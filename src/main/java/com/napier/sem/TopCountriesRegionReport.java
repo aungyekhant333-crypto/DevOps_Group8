@@ -68,6 +68,7 @@ public class TopCountriesRegionReport {
                     "Could not retrieve the top countries in the region."
             );
             System.err.println("Database error: " + e.getMessage());
+            throw new RuntimeException("Report execution failed.", e);
         }
     }
 }
