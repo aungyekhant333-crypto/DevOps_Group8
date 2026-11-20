@@ -5,6 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Retrieves the population of a specified city.
+ */
 public class CityPopulationReport {
 
     public static void showPopulation(String cityName) {
@@ -47,6 +50,7 @@ public class CityPopulationReport {
         } catch (SQLException e) {
             System.err.println("Could not retrieve the city population.");
             System.err.println("Database error: " + e.getMessage());
+            throw new RuntimeException("Report execution failed.", e);
         }
     }
 }

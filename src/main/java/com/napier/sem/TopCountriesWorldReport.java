@@ -5,6 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Retrieves the top-ranked countries by population worldwide.
+ */
 public class TopCountriesWorldReport {
 
     public static void showReport(int limit) {
@@ -50,6 +53,7 @@ public class TopCountriesWorldReport {
                     "Could not retrieve the top countries worldwide."
             );
             System.err.println("Database error: " + e.getMessage());
+            throw new RuntimeException("Report execution failed.", e);
         }
     }
 }

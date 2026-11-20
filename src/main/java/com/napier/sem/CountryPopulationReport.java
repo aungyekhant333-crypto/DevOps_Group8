@@ -5,6 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Retrieves the total population of a specified country.
+ */
 public class CountryPopulationReport {
 
     public static void showPopulation(String countryName) {
@@ -36,6 +39,7 @@ public class CountryPopulationReport {
         } catch (SQLException e) {
             System.err.println("Could not retrieve the country population.");
             System.err.println("Database error: " + e.getMessage());
+            throw new RuntimeException("Report execution failed.", e);
         }
     }
 }

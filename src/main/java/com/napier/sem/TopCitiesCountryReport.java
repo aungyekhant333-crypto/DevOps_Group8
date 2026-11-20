@@ -5,6 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Retrieves the top-ranked cities by population within a specified country.
+ */
 public class TopCitiesCountryReport {
 
     public static void showReport(String country, int limit) {
@@ -72,6 +75,7 @@ public class TopCitiesCountryReport {
                     "Could not retrieve the top cities in " + country + "."
             );
             System.err.println("Database error: " + e.getMessage());
+            throw new RuntimeException("Report execution failed.", e);
         }
     }
 }

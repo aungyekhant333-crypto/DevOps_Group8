@@ -5,6 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Retrieves the top-ranked cities by population within a specified district.
+ */
 public class TopCitiesDistrictReport {
 
     public static void showReport(String district, int limit) {
@@ -72,6 +75,7 @@ public class TopCitiesDistrictReport {
                     "Could not retrieve the top cities in " + district + "."
             );
             System.err.println("Database error: " + e.getMessage());
+            throw new RuntimeException("Report execution failed.", e);
         }
     }
 }
