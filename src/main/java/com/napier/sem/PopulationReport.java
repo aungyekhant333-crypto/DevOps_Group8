@@ -6,6 +6,9 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Retrieves regional population totals and urban and non-urban population statistics.
+ */
 public class PopulationReport {
 
     /**

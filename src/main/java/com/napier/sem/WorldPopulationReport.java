@@ -5,6 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Calculates and displays the combined population of the world.
+ */
 public class WorldPopulationReport {
 
     public static void showPopulation() {

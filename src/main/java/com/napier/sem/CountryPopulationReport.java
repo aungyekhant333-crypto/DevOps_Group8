@@ -5,6 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Retrieves the total population of a specified country.
+ */
 public class CountryPopulationReport {
 
     public static void showPopulation(String countryName) {

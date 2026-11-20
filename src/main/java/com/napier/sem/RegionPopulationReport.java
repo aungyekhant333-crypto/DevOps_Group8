@@ -5,6 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Retrieves the total population of a specified geographical region.
+ */
 public class RegionPopulationReport {
 
     public static void showPopulation(String regionName) {

@@ -5,6 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Reports estimated language speaker populations and their percentages of the world population.
+ */
 public class LanguageSpeakersReport {
 
     public static void showReport() {

@@ -6,6 +6,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Generates population reports for continents, including continent-wide totals and individual continent lookups.
+ */
 public class ContinentPopulationReport {
 
     // Report 22: Population lookup for one specified continent
