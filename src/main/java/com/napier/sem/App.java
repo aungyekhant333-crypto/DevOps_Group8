@@ -307,8 +307,8 @@ public class App {
         }
     }
 
-    // Yoon: reports 27–32 are visible but not implemented.
 
+    // Yoon: reports 27–32.
     private static void showTopCitiesMenu(Scanner scanner) {
         boolean back = false;
 
@@ -321,16 +321,58 @@ public class App {
             System.out.println("31. Top N cities in a district by population");
             System.out.println("32. Population breakdown by country");
             System.out.println("0. Return to main menu");
-            System.out.println("These reports have not been implemented yet.");
             System.out.print("Choose a report: ");
 
             String choice = scanner.nextLine().trim();
 
             switch (choice) {
-                case "27", "28", "29", "30", "31", "32" ->
-                        System.out.println(
-                                "This report has not been implemented yet.");
+                case "27" -> {
+                    int n = readPositiveInt(scanner);
+                    if (n > 0) {
+                        TopCitiesWorldReport.showReport(n);
+                    }
+                }
+
+                case "28" -> {
+                    System.out.print("Enter a continent name: ");
+                    String continent = scanner.nextLine().trim();
+                    int n = readPositiveInt(scanner);
+                    if (n > 0) {
+                        TopCitiesContinentReport.showReport(continent, n);
+                    }
+                }
+
+                case "29" -> {
+                    System.out.print("Enter a region name: ");
+                    String region = scanner.nextLine().trim();
+                    int n = readPositiveInt(scanner);
+                    if (n > 0) {
+                        TopCitiesRegionReport.showReport(region, n);
+                    }
+                }
+
+                case "30" -> {
+                    System.out.print("Enter a country name: ");
+                    String country = scanner.nextLine().trim();
+                    int n = readPositiveInt(scanner);
+                    if (n > 0) {
+                        TopCitiesCountryReport.showReport(country, n);
+                    }
+                }
+
+                case "31" -> {
+                    System.out.print("Enter a district name: ");
+                    String district = scanner.nextLine().trim();
+                    int n = readPositiveInt(scanner);
+                    if (n > 0) {
+                        TopCitiesDistrictReport.showReport(district, n);
+                    }
+                }
+
+                case "32" -> CountryPopulationBreakdownReport.showReport();
+
                 case "0" -> back = true;
+
                 default -> System.out.println("Invalid report choice.");
             }
 
