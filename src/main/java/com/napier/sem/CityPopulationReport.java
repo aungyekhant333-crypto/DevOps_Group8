@@ -5,6 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Retrieves the population of a specified city.
+ */
 public class CityPopulationReport {
 
     public static void showPopulation(String cityName) {

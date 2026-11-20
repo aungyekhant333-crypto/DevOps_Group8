@@ -5,6 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Reports a country's total population and its urban and non-urban population breakdown.
+ */
 public class CountryPopulationBreakdownReport {
 
     public static void showReport() {

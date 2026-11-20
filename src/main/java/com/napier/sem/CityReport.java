@@ -5,6 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Retrieves city lists for the world, continents, regions, countries, and districts.
+ */
 public class CityReport
 {
     // Report 9: All cities in the world by population.

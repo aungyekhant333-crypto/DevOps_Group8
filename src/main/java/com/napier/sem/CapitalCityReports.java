@@ -5,6 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Generates capital city reports worldwide and by continent or region, including top-ranked capitals.
+ */
 public class CapitalCityReports {
 
     // Report 1: All capital cities in the world.
