@@ -5,6 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Calculates and displays the total population of a specified district.
+ */
 public class DistrictPopulationReport {
 
     public static void showPopulation(String districtName) {
@@ -39,6 +42,7 @@ public class DistrictPopulationReport {
         } catch (SQLException e) {
             System.err.println("Could not retrieve the district population.");
             System.err.println("Database error: " + e.getMessage());
+            throw new RuntimeException("Report execution failed.", e);
         }
     }
 }

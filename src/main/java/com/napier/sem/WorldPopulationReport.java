@@ -5,6 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Calculates and displays the combined population of the world.
+ */
 public class WorldPopulationReport {
 
     public static void showPopulation() {
@@ -24,6 +27,7 @@ public class WorldPopulationReport {
         } catch (SQLException e) {
             System.err.println("Could not retrieve the world population.");
             System.err.println("Database error: " + e.getMessage());
+            throw new RuntimeException("Report execution failed.", e);
         }
     }
 }

@@ -6,6 +6,9 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Retrieves country reports for the world, individual continents, and geographical regions.
+ */
 public class CountryReports {
 
     /**
@@ -45,6 +48,7 @@ public class CountryReports {
 
         } catch (Exception e) {
             e.printStackTrace();
+            throw new RuntimeException("Report database retrieval failed.", e);
         }
 
         return countries;
@@ -93,6 +97,7 @@ public class CountryReports {
 
         } catch (Exception e) {
             e.printStackTrace();
+            throw new RuntimeException("Report database retrieval failed.", e);
         }
 
         return countries;
@@ -141,6 +146,7 @@ public class CountryReports {
 
         } catch (Exception e) {
             e.printStackTrace();
+            throw new RuntimeException("Report database retrieval failed.", e);
         }
 
         return countries;

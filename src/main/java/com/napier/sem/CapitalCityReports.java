@@ -5,6 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Generates capital city reports worldwide and by continent or region, including top-ranked capitals.
+ */
 public class CapitalCityReports {
 
     // Report 1: All capital cities in the world.
@@ -115,6 +118,7 @@ public class CapitalCityReports {
         } catch (SQLException e) {
             System.err.println("Could not retrieve the capital city report.");
             System.err.println("Database error: " + e.getMessage());
+            throw new RuntimeException("Report execution failed.", e);
         }
     }
 }

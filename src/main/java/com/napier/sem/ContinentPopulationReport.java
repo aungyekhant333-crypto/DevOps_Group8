@@ -6,6 +6,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Generates population reports for continents, including continent-wide totals and individual continent lookups.
+ */
 public class ContinentPopulationReport {
 
     // Report 22: Population lookup for one specified continent
@@ -39,6 +42,7 @@ public class ContinentPopulationReport {
         } catch (SQLException e) {
             System.err.println("Could not retrieve the continent population.");
             System.err.println("Database error: " + e.getMessage());
+            throw new RuntimeException("Report execution failed.", e);
         }
     }
 
@@ -105,6 +109,7 @@ public class ContinentPopulationReport {
                     "Could not retrieve the population breakdown by continent."
             );
             System.err.println("Database error: " + e.getMessage());
+            throw new RuntimeException("Report execution failed.", e);
         }
     }
 }

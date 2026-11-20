@@ -1,0 +1,9 @@
+.git
+.github
+.idea
+.vscode
+*.iml
+.env
+.env.*
+docker/
+docker-compose.yml

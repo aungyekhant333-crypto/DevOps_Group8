@@ -1,16 +1,19 @@
-name: Build and test DevOps Group 8
+name: Build and run DevOps Group 8
 
 on:
   push:
   pull_request:
 
 jobs:
-  build:
-    name: Build Maven JAR and Docker image
+  build-and-run:
+    name: Build and run application with Docker
     runs-on: ubuntu-24.04
 
+    env:
+      DB_PASSWORD: ci-only-password
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up JDK 25
@@ -20,8 +23,12 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - name: Build with Maven
+      - name: Build executable JAR
         run: mvn --batch-mode clean package
 
-      - name: Build Docker image
-        run: docker build -t devops-group8:ci .
+      - name: Start database and run application
+        run: docker compose up --build --abort-on-container-exit --exit-code-from app
+
+      - name: Stop containers and clean up database
+        if: always()
+        run: docker compose down --volumes --remove-orphans
