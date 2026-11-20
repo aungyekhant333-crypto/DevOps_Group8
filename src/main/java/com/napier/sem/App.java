@@ -11,6 +11,18 @@ public class App {
         CountryReports countryReports = new CountryReports();
         PopulationReport populationReport = new PopulationReport();
 
+        // Run all reports automatically when launched in batch mode.
+        if (args.length > 0 && "--batch".equals(args[0])) {
+            try {
+                runBatchReports(countryReports, populationReport);
+            } catch (SQLException e) {
+                System.err.println("Batch report execution failed.");
+                System.err.println("Database error: " + e.getMessage());
+                System.exit(1);
+            }
+            return;
+        }
+
         try (Scanner scanner = new Scanner(System.in)) {
             boolean running = true;
 
@@ -46,6 +58,138 @@ public class App {
                 }
             }
         }
+    }
+
+    /**
+     * Executes all 32 reports automatically using predefined parameters.
+     * This mode allows the application to run without interactive input,
+     * including in a GitHub Actions workflow.
+     */
+    private static void runBatchReports(
+            CountryReports countryReports,
+            PopulationReport populationReport) throws SQLException {
+
+        // Predefined parameters for automated execution.
+        final String CONTINENT = "Asia";
+        final String REGION = "Southeast Asia";
+        final String COUNTRY = "Myanmar";
+        final String DISTRICT = "Yangon";
+        final String CITY = "Yangon";
+        final int TOP_N = 10;
+
+        System.out.println("==============================================");
+        System.out.println(" DEVOPS GROUP 8 - AUTOMATED REPORT EXECUTION");
+        System.out.println("==============================================");
+
+        System.out.println("\n--- Countries Reports ---");
+
+        System.out.println("\nReport 1: All countries worldwide");
+        printCountries(countryReports.getCountriesByPopulation());
+
+        System.out.println("\nReport 2: Countries in " + CONTINENT);
+        printCountries(countryReports.getCountriesByContinent(CONTINENT));
+
+        System.out.println("\nReport 3: Countries in " + REGION);
+        printCountries(countryReports.getCountriesByRegion(REGION));
+
+        System.out.println("\nReport 4: Population breakdown by region");
+        printRegionalPopulation(populationReport.getPopulationByRegion());
+
+        System.out.println("\nReport 5: Top countries worldwide");
+        TopCountriesWorldReport.showReport(TOP_N);
+
+        System.out.println("\nReport 6: Top countries in " + CONTINENT);
+        TopCountriesContinentReport.showReport(CONTINENT, TOP_N);
+
+        System.out.println("\nReport 7: Top countries in " + REGION);
+        TopCountriesRegionReport.showReport(REGION, TOP_N);
+
+        System.out.println("\nReport 8: Language speakers");
+        LanguageSpeakersReport.showReport();
+
+        System.out.println("\n--- City Reports ---");
+
+        System.out.println("\nReport 9: All cities worldwide");
+        CityReport.allCitiesInWorld();
+
+        System.out.println("\nReport 10: Cities in " + CONTINENT);
+        CityReport.allCitiesInContinent(CONTINENT);
+
+        System.out.println("\nReport 11: Cities in " + REGION);
+        CityReport.allCitiesInRegion(REGION);
+
+        System.out.println("\nReport 12: Cities in " + COUNTRY);
+        CityReport.allCitiesInCountry(COUNTRY);
+
+        System.out.println("\nReport 13: Cities in " + DISTRICT);
+        CityReport.allCitiesInDistrict(DISTRICT);
+
+        System.out.println("\nReport 14: Population by continent");
+        ContinentPopulationReport.populationByContinent();
+
+        System.out.println("\n--- Capital Reports ---");
+
+        System.out.println("\nReport 15: All world capitals");
+        CapitalCityReports.showAllWorldCapitals();
+
+        System.out.println("\nReport 16: Capitals in " + CONTINENT);
+        CapitalCityReports.showAllCapitalsInContinent(CONTINENT);
+
+        System.out.println("\nReport 17: Capitals in " + REGION);
+        CapitalCityReports.showAllCapitalsInRegion(REGION);
+
+        System.out.println("\nReport 18: Top world capitals");
+        CapitalCityReports.showTopWorldCapitals(TOP_N);
+
+        System.out.println("\nReport 19: Top capitals in " + CONTINENT);
+        CapitalCityReports.showTopCapitalsInContinent(CONTINENT, TOP_N);
+
+        System.out.println("\nReport 20: Top capitals in " + REGION);
+        CapitalCityReports.showTopCapitalsInRegion(REGION, TOP_N);
+
+        System.out.println("\n--- Population Reports ---");
+
+        System.out.println("\nReport 21: World population");
+        WorldPopulationReport.showPopulation();
+
+        System.out.println("\nReport 22: " + CONTINENT + " population");
+        ContinentPopulationReport.showPopulation(CONTINENT);
+
+        System.out.println("\nReport 23: " + REGION + " population");
+        RegionPopulationReport.showPopulation(REGION);
+
+        System.out.println("\nReport 24: " + COUNTRY + " population");
+        CountryPopulationReport.showPopulation(COUNTRY);
+
+        System.out.println("\nReport 25: " + DISTRICT + " population");
+        DistrictPopulationReport.showPopulation(DISTRICT);
+
+        System.out.println("\nReport 26: " + CITY + " population");
+        CityPopulationReport.showPopulation(CITY);
+
+        System.out.println("\n--- Top Cities Reports ---");
+
+        System.out.println("\nReport 27: Top cities worldwide");
+        TopCitiesWorldReport.showReport(TOP_N);
+
+        System.out.println("\nReport 28: Top cities in " + CONTINENT);
+        TopCitiesContinentReport.showReport(CONTINENT, TOP_N);
+
+        System.out.println("\nReport 29: Top cities in " + REGION);
+        TopCitiesRegionReport.showReport(REGION, TOP_N);
+
+        System.out.println("\nReport 30: Top cities in " + COUNTRY);
+        TopCitiesCountryReport.showReport(COUNTRY, TOP_N);
+
+        System.out.println("\nReport 31: Top cities in " + DISTRICT);
+        TopCitiesDistrictReport.showReport(DISTRICT, TOP_N);
+
+        System.out.println("\nReport 32: Population breakdown by country");
+        CountryPopulationBreakdownReport.showReport();
+
+        System.out.println("\n==============================================");
+        System.out.println(" AUTOMATED REPORT EXECUTION FINISHED");
+        System.out.println("==============================================");
     }
 
     private static void printMainMenu() {
