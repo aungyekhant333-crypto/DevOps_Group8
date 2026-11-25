@@ -51,27 +51,21 @@ public class CountryPopulationBreakdownReport {
                 String country = resultSet.getString("Country");
                 long totalPopulation = resultSet.getLong("TotalPopulation");
                 long urbanPopulation = resultSet.getLong("UrbanPopulation");
-                long nonUrbanPopulation = totalPopulation - urbanPopulation;
 
-                double urbanPercentage = 0;
-                double nonUrbanPercentage = 0;
-
-                if (totalPopulation > 0) {
-                    urbanPercentage =
-                            (urbanPopulation * 100.0) / totalPopulation;
-
-                    nonUrbanPercentage =
-                            (nonUrbanPopulation * 100.0) / totalPopulation;
-                }
+                PopulationCalculator.Breakdown breakdown =
+                        PopulationCalculator.calculate(
+                                totalPopulation,
+                                urbanPopulation
+                        );
 
                 System.out.printf(
                         "%-35s %,18d %,18d (%6.2f%%) %,18d (%6.2f%%)%n",
                         country,
-                        totalPopulation,
-                        urbanPopulation,
-                        urbanPercentage,
-                        nonUrbanPopulation,
-                        nonUrbanPercentage
+                        breakdown.totalPopulation(),
+                        breakdown.urbanPopulation(),
+                        breakdown.urbanPercentage(),
+                        breakdown.nonUrbanPopulation(),
+                        breakdown.nonUrbanPercentage()
                 );
             }
 

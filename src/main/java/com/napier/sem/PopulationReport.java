@@ -58,26 +58,19 @@ public class PopulationReport {
                 long urbanPopulation =
                         resultSet.getLong("UrbanPopulation");
 
-                long nonUrbanPopulation =
-                        totalPopulation - urbanPopulation;
-
-                double urbanPercentage =
-                        totalPopulation > 0
-                                ? (urbanPopulation * 100.0) / totalPopulation
-                                : 0;
-
-                double nonUrbanPercentage =
-                        totalPopulation > 0
-                                ? (nonUrbanPopulation * 100.0) / totalPopulation
-                                : 0;
+                PopulationCalculator.Breakdown breakdown =
+                        PopulationCalculator.calculate(
+                                totalPopulation,
+                                urbanPopulation
+                        );
 
                 RegionPopulation report = new RegionPopulation(
                         region,
-                        totalPopulation,
-                        urbanPopulation,
-                        nonUrbanPopulation,
-                        urbanPercentage,
-                        nonUrbanPercentage
+                        breakdown.totalPopulation(),
+                        breakdown.urbanPopulation(),
+                        breakdown.nonUrbanPopulation(),
+                        breakdown.urbanPercentage(),
+                        breakdown.nonUrbanPercentage()
                 );
 
                 reports.add(report);

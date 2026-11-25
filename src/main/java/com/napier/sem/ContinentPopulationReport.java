@@ -85,22 +85,18 @@ public class ContinentPopulationReport {
                 String continent = resultSet.getString("Continent");
                 long total = resultSet.getLong("TotalPopulation");
                 long urban = resultSet.getLong("UrbanPopulation");
-                long nonUrban = resultSet.getLong("NonUrbanPopulation");
 
-                double urbanPercentage =
-                        total > 0 ? urban * 100.0 / total : 0.0;
-
-                double nonUrbanPercentage =
-                        total > 0 ? nonUrban * 100.0 / total : 0.0;
+                PopulationCalculator.Breakdown breakdown =
+                        PopulationCalculator.calculate(total, urban);
 
                 System.out.printf(
                         "%-25s %,15d %,15d %,15d %11.2f%% %14.2f%%%n",
                         continent,
-                        total,
-                        urban,
-                        nonUrban,
-                        urbanPercentage,
-                        nonUrbanPercentage
+                        breakdown.totalPopulation(),
+                        breakdown.urbanPopulation(),
+                        breakdown.nonUrbanPopulation(),
+                        breakdown.urbanPercentage(),
+                        breakdown.nonUrbanPercentage()
                 );
             }
 
