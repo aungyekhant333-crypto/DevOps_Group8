@@ -538,19 +538,20 @@ public class App {
 
     private static int readPositiveInt(Scanner scanner) {
         System.out.print("Enter the number of results (N): ");
-        String input = scanner.nextLine().trim();
+        String input = scanner.nextLine();
 
-        try {
-            int n = Integer.parseInt(input);
-            if (n <= 0) {
+        int n = InputValidator.parsePositiveInt(input);
+
+        if (n == -1) {
+            try {
+                Integer.parseInt(input.trim());
                 System.out.println("Enter a whole number greater than zero.");
-                return -1;
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Enter a whole number.");
             }
-            return n;
-        } catch (NumberFormatException e) {
-            System.out.println("Invalid input. Enter a whole number.");
-            return -1;
         }
+
+        return n;
     }
 
     private static void pause(Scanner scanner) {
