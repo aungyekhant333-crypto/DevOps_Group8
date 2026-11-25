@@ -23,10 +23,13 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - name: Build executable JAR
+      - name: Start database
+        run: docker compose up -d --wait --wait-timeout 60 database
+
+      - name: Build executable JAR and run tests
         run: mvn --batch-mode clean package
 
-      - name: Start database and run application
+      - name: Run application with Docker
         run: docker compose up --build --abort-on-container-exit --exit-code-from app
 
       - name: Stop containers and clean up database
